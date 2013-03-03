@@ -1,0 +1,19 @@
+<pre ng-bind="composition | json"></pre>
+
+<!-- Composition -->
+<h2 class="title">{{composition.title}}</h2>
+<ul compsort class="composition" ng-model="composition.lines">
+    <li ng-repeat="line in composition.lines" 
+        class="{{line.type}} line">
+        {{line.content}}
+    </li>
+</ul>
+
+
+<!-- Trash -->
+<a id="trash" droppable></a>
+
+<!-- Composition Toolbar -->
+<!-- <div id="add_phrase" class="btn phrase new_phrase">  <span class="icon-plus"></span> phrase</div>
+<div id="add_section" class="btn section-wrapper new_section"><span class="icon-plus"></span> section</div>
+<a id="altcount" class="btn" ng-click="showHideAlternates()"><li class="icon-plus"></li> scraps <span class="opacity_50">{{altcount}}</span></a> -->

@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'CamboRegular';
+    src: url('../fonts/cambo/Cambo-Regular-webfont.eot');
+    src: url('../fonts/cambo/Cambo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cambo/Cambo-Regular-webfont.woff') format('woff'),
+         url('../fonts/cambo/Cambo-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/cambo/Cambo-Regular-webfont.svg#CamboRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/chunkfive/Chunkfive-webfont.eot');
+    src: url('../fonts/chunkfive/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chunkfive/Chunkfive-webfont.woff') format('woff'),
+         url('../fonts/chunkfive/Chunkfive-webfont.ttf') format('truetype'),
+         url('../fonts/chunkfive/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.opacity_75 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+  filter: alpha(opacity=75);  /* IE 5-7 */
+  -moz-opacity: 0.75; /* Netscape */
+  -khtml-opacity: 0.75; /* Safari 1.x */
+  opacity: 0.75; /* Good browsers */
+}
+
+.opacity_50 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+  filter: alpha(opacity=50);  /* IE 5-7 */
+  -moz-opacity: 0.5; /* Netscape */
+  -khtml-opacity: 0.5; /* Safari 1.x */
+  opacity: 0.5; /* Good browsers */
+}

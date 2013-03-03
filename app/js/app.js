@@ -1,10 +1,14 @@
 'use strict';
 
+// App & load ui module
+var songese = angular.module('songese', ['ui', 'songese.directives']);
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives']).
+songese.
   config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: MyCtrl1});
-    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: MyCtrl2});
-    $routeProvider.otherwise({redirectTo: '/view1'});
+  	$routeProvider.when('/',       { templateUrl: 'partials/composition.html', controller: CompositionCtrl});
+    $routeProvider.when('/lyrics', { templateUrl: 'partials/lyrics.html',      controller: LyricsCtrl});
+    $routeProvider.when('/chords', { templateUrl: 'partials/chords.html',      controller: ChordsCtrl});
+    $routeProvider.when('/ideas',  { templateUrl: 'partials/ideas.html',       controller: IdeasCtrl});
+    $routeProvider.otherwise({redirectTo: '/'});
   }]);

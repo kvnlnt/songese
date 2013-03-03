@@ -1,30 +1,99 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+/* 
+ * Main 
+ */
+body {
+	margin:20px;
+	letter-spacing: 0;
+	font: 14px/14px Arial, sans-serif;
+	color: #666;
+	background-color: #f2f2f2;
+	overflow-x: hidden;
 }
 
-.menu:before {
-  content: "[";
+h1.title {
+	font-family: 'Arial';
+	font-size: 18px;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
-.menu:after {
-  content: "]";
+h2.title {
+	margin: 10px 0px;
+	padding: 0px !important;
 }
 
-.menu > li {
-  display: inline;
+h3.title {
+	margin: 0px;
+	padding: 0px !important;
+	font: 14px/32px 'CamboRegular', Arial, sans-serif;
+	color:#999;
+	cursor: move;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+.composition { 
+	max-width: 500px;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+ul, ul li{
+	list-style: none !important;
+	margin:0px;
+	padding:0px;
+}
+
+.lines {
+	min-height: 24px;
+}
+
+.line {
+	border-bottom:1px solid #c8eefe;
+	font: 14px/24px 'CamboRegular', Arial, sans-serif;
+	margin:0px auto;
+}
+
+.section-placeholder {
+	background-color:#fafafa !important;
+	border:1px dotted #e2e2e2;
+	min-height: 24px;
+}
+
+.line-placeholder {
+	background-color:#fafafa !important;
+	border:1px dotted #e2e2e2;
+	min-height: 24px;
+}
+
+
+/* Elements */
+pre {
+	text-align:left; 
+	width:400px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size:10px;
+}
+
+#trash {
+	background-image: url(../img/218-trash2.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 50px;
+	background-color: #fff;
+	border:1px solid d2d2d2;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	position: fixed;
+	right:10px;
+	bottom:10px;
+	display:none;
+}
+
+#trash.hover {
+	background-color: #FADEE9;
+}
+
+#emptyTrash{
+	float: right;
 }

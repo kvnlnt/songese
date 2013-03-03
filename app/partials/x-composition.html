@@ -1,0 +1,41 @@
+<!-- <pre ng-bind="composition | json"></pre> -->
+
+<!-- Composition -->
+<div class="composition" ui-sortable="section_sort_config()">
+
+    <!-- Main -->
+	<h2 class="title">{{composition.title}}</h2>
+	<div class="section-wrapper" ng-repeat="section in composition.sections">
+        <h3  class="title opacity_50">{{section.type}}</h3>
+        <small ng-show="section.desc.length">{{ section.desc }}</small>
+        <div ui-multi-sortable ng-model="composition" model-subset="sections[{{ $index }}].phrases" class="section" ng-show="section.phrases.length">
+              <div class="phrase" ng-repeat="phrase in section.phrases">{{ phrase.phrase }}</div>
+        </div>
+    </div> <!-- / section-wrapper -->
+
+    <!-- Trash -->
+    <a id="trash" droppable></a>
+
+    <!-- Composition Toolbar -->
+    <div id="add_phrase" class="btn phrase new_phrase">  <span class="icon-plus"></span> phrase</div>
+    <div id="add_section" class="btn section-wrapper new_section"><span class="icon-plus"></span> section</div>
+    <a id="altcount" class="btn" ng-click="showHideAlternates()"><li class="icon-plus"></li> scraps <span class="opacity_50">{{altcount}}</span></a>
+
+    <!-- Alternates -->
+    <div id="alternates" class="composition" ng-show="showAlternates">
+        <a id="emptyTrash" class="btn btn-small" ng-show="altcount" ng-click="emptyTrash()"><span class="icon-trash"></span></a>
+        <h2 class="title">Scraps</h2>
+        <div class="alternates-section-wrapper" ng-repeat="section in composition.alternates">
+            <h3 ng-show="section.phrases.length"  class="title opacity_50">{{ section.type }}</h3>
+            <p ng-show="!section.phrases.length && composition.alternates.length == 1"  class="text-error">
+                This is where you can keep fragments of your composition. 
+                Drag sections and phrases to the recycling bin and they'll be automatically added here.
+            </p>
+            <small ng-show="section.note.length">{{ section.note }}</small>
+            <div class="alternates-section" ng-show = "section.phrases.length">
+              <div class="alternates-phrase" ng-repeat="phrase in section.phrases">{{ phrase.phrase }}</div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- / Composition
