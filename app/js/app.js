@@ -1,7 +1,7 @@
 'use strict';
 
 // App & load ui module
-var songese = angular.module('songese', ['ui', 'songese.directives']);
+var songese = angular.module('songese', ['songese.directives', 'ngSanitize']);
 
 // Declare app level module which depends on filters, and services
 songese.

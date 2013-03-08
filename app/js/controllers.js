@@ -1,37 +1,29 @@
 'use strict';
 
-/* Controllers */
-function CompositionCtrl($scope) {
+function CompositionCtrl($scope, $http) {
 
-    $scope.composition = {
-        title: "Title",
-        sections: [
-            { 
-                title: "verse 1",
-                lines: [
-                    { type: 'lyric', content: 'a1' },
-                    { type: 'lyric', content: 'a2' }
-                ]
-            },
-            { 
-                title: "chorus",
-                lines: [
-                    { type: 'lyric', content: 'b1' },
-                    { type: 'lyric', content: 'b2' }
-                ]
-            },
-            { 
-                title: "bridge",
-                 lines: [
-                    { type: 'lyric', content: 'c1' },
-                    { type: 'lyric', content: 'c2' }
-                ]
-            }
-        ]
-    } // composition
-}
+	// Last key pressed
+    $scope.key   = null; // last key pressed
+    $scope.node  = null; // last cursor node
+    $scope.ichar = null; // last cursor char
+    $scope.song  = null; // song
 
-CompositionCtrl.$inject = ['$scope'];
+	// Get song
+    $http({  
+    	method: 'GET', 
+    	url: 'songs/billiejean.json', 
+    	transformResponse: function(data) { 
+    		$scope.song = JSON.parse(data);
+    		$("#composition").html(colorize($scope.song.composition));
+    	}, 
+    	cache: false
+    }).
+    success(function(data, status) {}).
+    error(function(data, status) {});
+
+} // CompositionCtrl
+
+CompositionCtrl.$inject = ['$scope','$http'];
 
 function LyricsCtrl() {}
 LyricsCtrl.$inject = [];

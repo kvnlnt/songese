@@ -1,0 +1,23 @@
+{
+    "title":"Billie Jean",
+    "sections":[
+        {   
+            "title":"verse 1", 
+            "lines": [
+             { "type": "lyric", "content": "She Was More Like A Beauty Queen From A Movie Scene" },
+             { "type": "lyric", "content": "I Said Don't Mind, But What Do You Mean I Am The One" },
+             { "type": "lyric", "content": "Who Will Dance On The Floor In The Round" },
+             { "type": "lyric", "content" : "She Said I Am The One Who Will Dance On The Floor In The Round"}
+            ]
+        },
+        {   
+            "title":"chorus", 
+            "lines": [
+             { "type": "lyrice", "content": "Billie Jean Is Not My Lover" },
+             { "type": "lyrice", "content": "She's Just A Girl Who Claims That I Am The One" },
+             { "type": "lyrice", "content": "But The Kid Is Not My Son" },
+             { "type": "lyrice", "content": "She Says I Am The One, But The Kid Is Not My Son" }
+            ]
+        }
+    ]
+}
